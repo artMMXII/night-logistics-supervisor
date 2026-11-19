@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -20,12 +21,18 @@
         <p>Остатки по отделам на конец смены</p>
       </div>
     </header>
-    <p style="margin:0 0 18px;"><a href="distribution.html" class="small-button" style="display:inline-flex;align-items:center;text-decoration:none;color:#354052;">Распределение смены →</a></p>
+
+    <a href="distribution.html" class="small-button"
+       style="display:inline-block; text-decoration:none; margin-bottom:20px;">
+      Распределение смены →
+    </a>
+
     <section class="summary" aria-live="polite">
       <div class="summary-item"><span>Приход</span><strong id="totalIncoming">0</strong></div>
       <div class="summary-item"><span>Отзывы</span><strong id="totalReturns">0</strong></div>
       <div class="summary-item total"><span>Всего</span><strong id="totalAll">0</strong></div>
     </section>
+
     <section class="section-head">
       <div>
         <h2>Остатки по отделам</h2>
@@ -33,7 +40,9 @@
       </div>
       <button class="small-button" id="clearButton" type="button">Очистить</button>
     </section>
+
     <section id="departments" class="departments" aria-label="Отделы"></section>
+
     <section class="report-panel">
       <div class="report-head">
         <div>
@@ -49,6 +58,7 @@
       <button id="copyButton" class="primary-button" type="button">Скопировать отчёт</button>
       <p id="copyStatus" class="status" role="status"></p>
     </section>
+
     <footer>
       <span>Данные сохраняются на этом устройстве автоматически.</span>
       <span>Без аккаунта и сервера.</span>
