@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172554">
+  <meta name="description" content="Распределение сотрудников ночной логистики">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="distribution.css">
+  <title>Распределение смены — Ночная логистика</title>
+</head>
+<body>
+  <main class="app dispatch-app">
+    <header class="top">
+      <div class="brand-mark">НЛ</div>
+      <div>
+        <h1>Распределение смены</h1>
+        <p>Закрепления, помощь и общая зона</p>
+      </div>
+    </header>
+
+    <nav class="dispatch-nav">
+      <a href="index.html">← Остатки паллет</a>
+      <button type="button" class="small-button" id="resetShift">Новая смена</button>
+    </nav>
+
+    <section class="dispatch-summary" aria-live="polite">
+      <div class="summary-item"><span>На основных отделах</span><strong id="countMain">0</strong></div>
+      <div class="summary-item"><span>Свободны / ожидают</span><strong id="countFree">0</strong></div>
+      <div class="summary-item total"><span>На помощи и в общей зоне</span><strong id="countActive">0</strong></div>
+    </section>
+
+    <section class="dispatch-panel setup-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>1. Сотрудники и основные закрепления</h2>
+          <p>Укажи имя и отделы через запятую. Порядок важен там, где есть очередность.</p>
+        </div>
+        <button type="button" class="small-button" id="toggleSetup">Свернуть</button>
+      </div>
+      <div id="setupContent">
+        <div class="setup-hint">
+          Предварительно заполнены последние обсуждавшиеся закрепления. Их можно изменить. Отделы 2, 6, 7 и 14 оставлены для общей зоны.
+        </div>
+        <div id="employeeSetup" class="employee-setup"></div>
+        <div class="setup-actions">
+          <button type="button" class="small-button" id="addEmployee">＋ Добавить сотрудника</button>
+          <button type="button" class="primary-button compact" id="saveSetup">Сохранить закрепления</button>
+        </div>
+        <p id="setupStatus" class="status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="dispatch-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>2. Основная работа и помощь</h2>
+          <p>Завершай отдел по факту. Если у сотрудника несколько отделов, он освободится после завершения всех.</p>
+        </div>
+      </div>
+      <div id="mainDepartments" class="task-list"></div>
+    </section>
+
+    <section class="dispatch-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>3. Состояние сотрудников</h2>
+          <p>Освободившемуся сотруднику приложение предложит активный отдел без помощника. Решение подтверждаешь ты.</p>
+        </div>
+      </div>
+      <div id="employeeBoard" class="employee-board"></div>
+    </section>
+
+    <section class="dispatch-panel common-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>4. Общая зона</h2>
+          <p>Когда сотрудник завершил основные задачи и помощь, направляй его в 2, 6, 7 или 14. В одном отделе могут работать несколько человек.</p>
+        </div>
+      </div>
+      <div id="commonDepartments" class="common-grid"></div>
+    </section>
+
+    <footer>
+      <span>Состояние смены сохраняется автоматически на этом устройстве.</span>
+      <span>Подсказки учитывают остатки из ведомости, если они заполнены.</span>
+    </footer>
+  </main>
+  <script src="distribution.js"></script>
+</body>
+</html>
