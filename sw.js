@@ -1,4 +1,4 @@
-const CACHE = "night-logistics-cache-v2";
+const CACHE = "night-logistics-cache-v3";
 const FILES = [
   "./",
   "./index.html",
