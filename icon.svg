@@ -1,6 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-<rect width="128" height="128" rx="28" fill="#172554"/>
-<path d="M27 34h74v12H27zm0 24h74v12H27zm0 24h48v12H27z" fill="#fff"/>
-<circle cx="91" cy="88" r="17" fill="#60a5fa"/>
-<path d="M83 88l6 6 11-13" fill="none" stroke="#172554" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Night Logistic</title>
+  <rect width="512" height="512" rx="112" fill="#101D35"/>
+  <path d="M105 356h302" fill="none" stroke="#F4A340" stroke-width="22" stroke-linecap="round"/>
+  <path d="M128 382h256M150 356v42m70-42v42m72-42v42m70-42v42" fill="none" stroke="#F4A340" stroke-width="16" stroke-linecap="round"/>
+  <rect x="130" y="235" width="112" height="105" rx="12" fill="#F4A340"/>
+  <rect x="254" y="188" width="128" height="152" rx="12" fill="#F4A340"/>
+  <path d="M130 268h112M186 235v105M254 228h128M318 188v152" fill="none" stroke="#101D35" stroke-width="12" opacity=".75"/>
+  <path d="M110 167h170" fill="none" stroke="#F4A340" stroke-width="18" stroke-linecap="round"/>
+  <path d="m254 139 30 28-30 28" fill="none" stroke="#F4A340" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+
